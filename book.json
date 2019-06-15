@@ -1,0 +1,75 @@
+{
+    "title": "MySQL开发规范",
+    "description": "MySQL开发规范",
+    "author": "lishaofei",
+    "output.name": "site",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "structure": {
+        "readme": "README.md"
+    },
+    "plugins": [
+        "copy-code-button",
+        "-lunr", "-search", "search-plus", "search-pro",
+        "github",
+        "emphasize",
+        "splitter",
+        "-sharing",
+        "-highlight",
+        "tbfed-pagefooter",
+        "anchors",
+        "-livereload",
+        "simple-page-toc",
+        "prism",
+        "prism-themes",
+        "sectionx",
+        "back-to-top-button",
+        "cuav-chapters",
+        "heading-anchors",
+        "theme-fexa",
+        "disqus"
+    ],
+
+    "pluginsConfig": {
+        "sytles": {
+            "website": "styles/website.css"
+        },
+        "fontsettings": {
+            "theme": "white",
+            "family": "sans",
+            "size": 1
+        },
+        "github": {
+            "url": "https://github.com/zerolee1993/mysql-guide"
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-okaidia.css"
+            ]
+        },
+        "theme-default": {
+            "showLevel": true
+        },
+        "tbfed-pagefooter": {
+            "copyright": "Copyright © zerolee 2019",
+            "modify_label": "修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+        "sectionx": {
+            "tag": "b"
+        },
+        "theme-fexa":{
+            "search-placeholder":"输入关键字",
+            "logo":"assets/images/logo.png",
+            "favicon": "assets/images/favicon.ico"
+        },
+        "disqus": {
+            "shortName": "zeroLee"
+        }
+    }
+}

@@ -1,0 +1,110 @@
+/* 全局字体，header 颜色 */
+body {
+    font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    /*background-color: #061235;*/
+}
+
+/* header 下边框 */
+.header-inner {
+    /*border-bottom: 0px solid #000;*/
+}
+
+/* header 标题字体 */
+.header-inner .title {
+    float: left;
+    font-size: 20px;
+    line-height: 60px;
+    margin-left: 10px;
+    font-weight: 700;
+    /*color: #969EBB;*/
+}
+
+/* 搜索栏样式 */
+.header-inner #book-search-input {
+    float: right;
+    width: 300px;
+    user-select: none;
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    border-radius:10px;
+}
+
+.header-inner #book-search-input input[type="text"] {
+    width: 80%;
+    background: #e4e4e4;
+    border-radius: 9px 0px 0px 9px;
+}
+
+/* header 隐藏 logo */
+.header-inner .logo {
+    float: left;
+    height: 0px;
+    width: 0px;
+    background: url(../assets/images/logo.png);
+    background-size: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+/* 隐藏文章内部右上角导航的标题 */
+.book-anchor-title {
+    display:none;
+    line-height: 38px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* 文章内部右上角导航加宽 */
+.book-anchor {
+    width: 220px;
+    border-left: 2px solid #E15954
+}
+
+/* 隐藏导航的标题 */
+.book-header .dropdown{
+    display: none;
+}
+
+/* 说明按钮样式 */
+.fa.pull-left {
+    margin-right: .3em;
+    display: none;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #FC4C52;
+    border-color: #FC4C52;
+    padding: 2px 5px 1px 5px;
+    margin: 1px;
+    font-size:12px;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info.focus,
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+    color: #fff;
+    background-color: #FC4C52;
+    border-color: #fff;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #F99935;
+    border-color: #F99935;
+    padding: 2px 5px 1px 5px;
+    font-size:12px;
+    margin: 1px;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success.focus,
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+    color: #fff;
+    background-color: #F99935;
+    border-color: #F99935;
+}
+
