@@ -106,7 +106,7 @@ MySQL限制每个表最多存储4096列，每行大小不能超过65535个字节
 
 <!--endsec-->
 
-- **表名和字段名，必须使用小写字母或数字，下划线分割，禁止出现数字开头，禁止两个下划线中间只出现数字见名知意，{% em %}不可超过32字符{% endem %}** <button class="section" target="s11" show="解释" hide="收起"></button>
+- **表名和字段名，必须使用小写字母或数字，下划线分割，禁止出现数字开头，禁止两个下划线中间只出现数字见名知意，不可超过32字符** <button class="section" target="s11" show="解释" hide="收起"></button>
 
 <!--sec data-title="解释" data-id="s11" data-show=false ces-->
 
