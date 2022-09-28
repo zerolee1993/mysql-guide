@@ -1,4 +1,6 @@
-**[离线版下载](https://github.com/zerolee1993/mysql-guide/export/standard-v1.0.pdf)**
+**[离线版下载](https://github.com/zerolee1993/mysql-guide/releases/download/untagged-f03c8d0449be52535abf/standard-v1.0.pdf)**
+
+
 
 # **建表需要注意什么？**
 
