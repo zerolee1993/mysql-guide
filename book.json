@@ -9,6 +9,11 @@
     "structure": {
         "readme": "README.md"
     },
+    "links" : {
+        "sidebar" : {
+            "Home" : "https://www.baidu.com"
+        }
+    },
     "plugins": [
         "copy-code-button",
         "-lunr", "-search", "search-plus", "search-pro",
@@ -27,8 +32,7 @@
         "back-to-top-button",
         "cuav-chapters",
         "heading-anchors",
-        "theme-fexa",
-        "disqus"
+        "page-toc-button"
     ],
 
     "pluginsConfig": {
@@ -70,6 +74,10 @@
         },
         "disqus": {
             "shortName": "zeroLee"
+        },
+        "page-toc-button": {
+            "maxTocDepth": 3, 
+            "minTocSize": 3
         }
     }
 }
