@@ -1,0 +1,522 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>开发规范(简化版) · MySQL开发规范</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="lishaofei">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="standard-v1.0.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="guide.html">
+            
+                <a href="guide.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    快速指引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="standard-v1.0.html">
+            
+                <a href="standard-v1.0.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    开发规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="standard-v1.0-simple.html">
+            
+                <a href="standard-v1.0-simple.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    开发规范(简化版)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >开发规范(简化版)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5EFA;&#x8868;&#x89C4;&#x8303;"><a name="&#x5EFA;&#x8868;&#x89C4;&#x8303;" class="plugin-anchor" href="#&#x5EFA;&#x8868;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x5EFA;&#x8868;&#x89C4;&#x8303;</strong></h1>
+<ul>
+<li><p><strong>&#x4F7F;&#x7528;&#x81EA;&#x589E; id &#x4F5C;&#x4E3A;&#x4E3B;&#x952E;</strong></p>
+</li>
+<li><p><strong>&#x4F7F;&#x7528; innodb &#x5F15;&#x64CE;</strong></p>
+</li>
+<li><p><strong>&#x4F7F;&#x7528;&#x7EDF;&#x4E00;&#x7F16;&#x7801; utf8mb4</strong></p>
+</li>
+<li><p><strong>&#x5C3D;&#x91CF;&#x5C06;&#x6240;&#x6709;&#x5217;&#x5B9A;&#x4E49;&#x4E3A;<code>NOT NULL</code></strong> </p>
+</li>
+</ul>
+<ul>
+<li><p><strong>&#x6240;&#x6709;&#x8868;&#x548C;&#x5B57;&#x6BB5;&#x90FD;&#x8981;&#x6DFB;&#x52A0;&#x6CE8;&#x91CA;&#xFF0C;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x542B;&#x4E49;&#x6216;&#x5BF9;&#x5B57;&#x6BB5;&#x8868;&#x793A;&#x7684;&#x72B6;&#x6001;&#x8FFD;&#x52A0;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x53CA;&#x65F6;&#x66F4;&#x65B0;&#x5B57;&#x6BB5;&#x6CE8;&#x91CA;</strong></p>
+</li>
+<li><p><strong>&#x5B58;&#x50A8;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x7684;&#x8868;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x7269;&#x7406;&#x5220;&#x9664;&#xFF0C;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5; <code>is_deleted</code> &#x8FDB;&#x884C;&#x903B;&#x8F91;&#x5220;&#x9664;</strong></p>
+</li>
+<li><p><strong>&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x5728;&#x8868;&#x4E2D;&#x5EFA;&#x7ACB;&#x9884;&#x7559;&#x5B57;&#x6BB5;</strong></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>&#x9002;&#x5F53;&#x8FDB;&#x884C;&#x53CD;&#x8303;&#x5F0F;&#x5316;&#x8BBE;&#x8BA1;&#xFF0C;&#x4FBF;&#x4E8E;&#x67E5;&#x8BE2;&#x548C;&#x7D22;&#x5F15;&#x4F18;&#x5316;</strong></p>
+</li>
+<li><p><strong>&#x5C3D;&#x91CF;&#x505A;&#x5230;&#x51B7;&#x70ED;&#x6570;&#x636E;&#x5206;&#x79BB;&#xFF0C;&#x51CF;&#x5C0F;&#x8868;&#x7684;&#x5BBD;&#x5EA6;</strong></p>
+</li>
+<li><p><strong>&#x5355;&#x8868;&#x884C;&#x6570;&#x8D85;&#x8FC7; 500 &#x4E07;&#x884C;&#x6216;&#x8005;&#x5355;&#x8868;&#x5BB9;&#x91CF;&#x8D85;&#x8FC7; 2GB &#xFF0C;&#x624D;&#x63A8;&#x8350;&#x8FDB;&#x884C;&#x5206;&#x5E93;&#x5206;&#x8868;</strong></p>
+</li>
+<li><p><strong>&#x907F;&#x514D;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5B58;&#x50A8;&#x56FE;&#x7247;&#x3001;&#x6587;&#x4EF6;&#x7B49;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;</strong></p>
+</li>
+</ul>
+<hr>
+<h1 id="&#x547D;&#x540D;&#x89C4;&#x8303;"><a name="&#x547D;&#x540D;&#x89C4;&#x8303;" class="plugin-anchor" href="#&#x547D;&#x540D;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x547D;&#x540D;&#x89C4;&#x8303;</strong></h1>
+<ul>
+<li><p><strong>&#x5E93;&#x540D;&#x4E0E;&#x5E94;&#x7528;&#x540D;&#x4FDD;&#x6301;&#x4E00;&#x81F4;</strong></p>
+</li>
+<li><p><strong>&#x5E38;&#x7528;&#x4E1A;&#x52A1;&#x5B57;&#x6BB5;&#x56E2;&#x961F;&#x5185;&#x90E8;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7EDF;&#x4E00;&#x547D;&#x540D;&#xFF0C;&#x5177;&#x4F53;&#x9700;&#x53C2;&#x8003;&#x56E2;&#x961F;&#x89C4;&#x8303;</strong></p>
+</li>
+<li><p><strong>&#x8868;&#x540D;&#x548C;&#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x6216;&#x6570;&#x5B57;&#xFF0C;&#x4E0B;&#x5212;&#x7EBF;&#x5206;&#x5272;&#xFF0C;&#x7981;&#x6B62;&#x51FA;&#x73B0;&#x6570;&#x5B57;&#x5F00;&#x5934;&#xFF0C;&#x7981;&#x6B62;&#x4E24;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#x4E2D;&#x95F4;&#x53EA;&#x51FA;&#x73B0;&#x6570;&#x5B57;&#x89C1;&#x540D;&#x77E5;&#x610F;&#xFF0C;&#x4E0D;&#x53EF;&#x8D85;&#x8FC7;32&#x5B57;&#x7B26;</strong></p>
+</li>
+<li><p><strong>&#x8868;&#x540D;&#x4E0D;&#x4F7F;&#x7528;&#x590D;&#x6570;&#x540D;&#x8BCD;</strong></p>
+</li>
+<li><p><strong>&#x8868;&#x8FBE;&#x662F;&#x4E0E;&#x5426;&#x6982;&#x5FF5;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>is_xxx</code> &#x7684;&#x65B9;&#x5F0F;&#x547D;&#x540D;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F; <code>UNSIGNED TINYINT</code> ( 1&#x8868;&#x793A;&#x662F;&#xFF0C;0&#x8868;&#x793A;&#x5426;&#xFF09;</strong></p>
+</li>
+<li><p><strong>&#x7981;&#x6B62;&#x4F7F;&#x7528; MySQL &#x4FDD;&#x7559;&#x5B57;&#xFF0C;&#x5982; <code>desc</code>&#x3001;<code>range</code>&#x3001;<code>match</code>&#x3001;<code>delayed</code> &#x7B49;</strong>&#xFF08;<a href="https://dev.mysql.com/doc/refman/5.6/en/keywords.html" target="_blank">&#x8BF7;&#x53C2;&#x8003;MySQL &#x5B98;&#x65B9;&#x4FDD;&#x7559;&#x5B57;</a>&#xFF09;</p>
+</li>
+<li><p><strong>&#x4E3B;&#x952E;&#x7D22;&#x5F15;&#x4F7F;&#x7528; pk_&#x524D;&#x7F00;&#xFF1B;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x4F7F;&#x7528; uk_&#x524D;&#x7F00;&#xFF1B;&#x666E;&#x901A;&#x7D22;&#x5F15;&#x4F7F;&#x7528; idx_&#x524D;&#x7F00;</strong></p>
+</li>
+<li><p><strong>&#x4E0D;&#x540C;&#x8868;&#x5B58;&#x50A8;&#x76F8;&#x540C;&#x6570;&#x636E;&#x7684;&#x5217;&#xFF08;&#x5173;&#x8054;&#x5217;&#xFF09;&#x7684;&#x5217;&#x540D;&#x548C;&#x5217;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x5B8C;&#x5168;&#x4E00;&#x81F4;</strong></p>
+</li>
+<li><p><strong>&#x4E34;&#x65F6;&#x5E93;&#x3001;&#x8868;&#x540D;&#x5FC5;&#x987B;&#x4EE5; <code>bak_</code> &#x4E3A;&#x524D;&#x7F00;&#xFF0C;&#x5E76;&#x4EE5; <code>_yyyyMMdd</code> &#x5B9E;&#x65F6;&#x65E5;&#x671F;&#x4E3A;&#x540E;&#x7F00;&#x3002;&#x4F8B;&#x5982; <code>tmp_test01_20190409</code></strong></p>
+</li>
+<li><p><strong>&#x5907;&#x4EFD;&#x5E93;&#x3001;&#x8868;&#x5FC5;&#x987B;&#x4EE5; <code>bak_</code> &#x4E3A;&#x524D;&#x7F00;&#xFF0C;&#x5E76;&#x4EE5; <code>_yyyyMMdd</code> &#x5B9E;&#x65F6;&#x65E5;&#x671F;&#x4E3A;&#x540E;&#x7F00;&#x3002;&#x4F8B;&#x5982; <code>bak_test01_20190409</code></strong></p>
+</li>
+</ul>
+<hr>
+<h1 id="&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x89C4;&#x8303;"><a name="&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x89C4;&#x8303;" class="plugin-anchor" href="#&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x89C4;&#x8303;</strong></h1>
+<ul>
+<li><p><strong>&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x4F18;&#x5148;&#x8003;&#x8651;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#xFF0C;&#x5176;&#x6B21;&#x4E3A;&#x65E5;&#x671F;&#x6216;&#x4E8C;&#x8FDB;&#x5236;&#x7C7B;&#x578B;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x5B57;&#x7B26;&#x7C7B;&#x578B;</strong></p>
+</li>
+<li><p><strong>&#x6574;&#x6570;&#x578B;&#x9009;&#x62E9;&#x80FD;&#x7B26;&#x5408;&#x9700;&#x6C42;&#x7684;&#x6700;&#x77ED;&#x5217;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x975E;&#x8D1F;&#x6570;&#xFF0C;&#x5FC5;&#x987B;&#x58F0;&#x660E; <code>UNSIGNED</code></strong></p>
+</li>
+<li><p><strong>&#x5B9E;&#x6570;&#x7C7B;&#x578B;&#x4F7F;&#x7528; <code>DECIMAL</code>&#xFF0C;&#x7981;&#x6B62;&#x4F7F;&#x7528; <code>FLOAT</code> &#x548C; <code>DOUBLE</code></strong></p>
+</li>
+<li><p><strong>&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x4EE3;&#x66FF;&#x65E5;&#x671F;&#x7C7B;&#x578B;&#xFF0C;&#x65E5;&#x671F;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x5C0F;&#xFF0C;&#x4FBF;&#x4E8E;&#x67E5;&#x627E;&#x8FC7;&#x6EE4;&#xFF0C;&#x6709;&#x4E30;&#x5BCC;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;</strong></p>
+</li>
+<li><p><strong>&#x4F7F;&#x7528; <code>TINYINT</code> &#x4EE3;&#x66FF; <code>ENUM</code></strong></p>
+</li>
+<li><p><strong>&#x4F7F;&#x7528; <code>INT UNSIGNED</code> &#x5B58;&#x50A8; IPV4</strong></p>
+</li>
+<li><p><strong>&#x4F7F;&#x7528; <code>VARCHAR</code> &#x65F6; &#x9009;&#x62E9;&#x80FD;&#x7B26;&#x5408;&#x9700;&#x6C42;&#x7684;&#x6700;&#x5C0F;&#x957F;&#x5EA6;</strong></p>
+</li>
+<li><p><strong>&#x4F7F;&#x7528; VARBINARY &#x5B58;&#x50A8;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;&#x7684;&#x53D8;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;VARBINARY &#x9ED8;&#x8BA4;&#x533A;&#x5206;&#x2F24;&#x5C0F;&#x5199;&#xFF0C;&#x6CA1;&#x6709;&#x5B57;&#x7B26;&#x96C6;&#x6982;&#x5FF5;&#xFF0C;&#x901F;&#x5EA6;&#x5FEB;</strong></p>
+</li>
+</ul>
+<hr>
+<h1 id="&#x7D22;&#x5F15;&#x89C4;&#x8303;"><a name="&#x7D22;&#x5F15;&#x89C4;&#x8303;" class="plugin-anchor" href="#&#x7D22;&#x5F15;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x7D22;&#x5F15;&#x89C4;&#x8303;</strong></h1>
+<ul>
+<li><p><strong>&#x4E1A;&#x52A1;&#x4E0A;&#x5177;&#x6709;&#x552F;&#x4E00;&#x7279;&#x6027;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x4E5F;&#x5FC5;&#x987B;&#x5EFA;&#x6210;&#x552F;&#x4E00;&#x7D22;&#x5F15;</strong></p>
+</li>
+<li><p><strong>&#x5728; <code>VARCHAR</code> &#x5B57;&#x6BB5;&#x4E0A;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x957F;&#x5EA6;&#xFF0C;&#x6CA1;&#x5FC5;&#x8981;&#x5BF9;&#x5168;&#x5B57;&#x6BB5;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#xFF0C;&#x6839;&#x636E; &#x5B9E;&#x9645;&#x6587;&#x672C;&#x533A;&#x5206;&#x5EA6;&#x51B3;&#x5B9A;&#x7D22;&#x5F15;&#x957F;&#x5EA6;&#x5373;&#x53EF;</strong></p>
+</li>
+<li><p><strong>&#x6BCF;&#x5F20;&#x8868;&#x7D22;&#x5F15;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;5&#x4E2A;</strong></p>
+</li>
+<li><p><strong>&#x907F;&#x514D;&#x5EFA;&#x7ACB;&#x5197;&#x4F59;&#x7D22;&#x5F15;&#x548C;&#x91CD;&#x590D;&#x7D22;&#x5F15;</strong></p>
+</li>
+<li><p><strong>&#x5BF9;&#x4E8E;&#x9891;&#x7E41;&#x67E5;&#x8BE2;&#x4F18;&#x5148;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x8986;&#x76D6;&#x7D22;&#x5F15;</strong></p>
+</li>
+</ul>
+<hr>
+<h1 id="sql-&#x7F16;&#x5199;&#x89C4;&#x8303;"><a name="sql-&#x7F16;&#x5199;&#x89C4;&#x8303;" class="plugin-anchor" href="#sql-&#x7F16;&#x5199;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>SQL &#x7F16;&#x5199;&#x89C4;&#x8303;</strong></h1>
+<ul>
+<li><p><strong>&#x907F;&#x514D;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x9690;&#x5F0F;&#x8F6C;&#x6362;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x7D22;&#x5F15;&#x5931;&#x6548;</strong></p>
+</li>
+<li><p><strong>&#x7981;&#x6B62;&#x4F7F;&#x7528; <code>SELECT *</code></strong></p>
+</li>
+<li><p><strong>&#x4F7F;&#x7528; <code>IN</code> &#x4EE3;&#x66FF; <code>OR</code></strong></p>
+</li>
+<li><p><strong>&#x4E0D;&#x4F7F;&#x7528;&#x53CD;&#x5411;&#x67E5;&#x8BE2;&#xFF0C;&#x5982; <code>NOT IN</code> &#x548C; <code>NOT LIKE</code></strong></p>
+</li>
+<li><p><strong>&#x7981;&#x6B62;&#x4F7F;&#x7528; <code>ORDER BY RAND()</code> &#x8FDB;&#x884C;&#x968F;&#x673A;&#x6392;&#x5E8F;</strong></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>&#x7981;&#x6B62;&#x5728; <code>WHERE</code> &#x4ECE;&#x53E5;&#x4E2D;&#x5BF9;&#x5217;&#x8FDB;&#x884C;&#x51FD;&#x6570;&#x8F6C;&#x6362;&#x548C;&#x8BA1;&#x7B97;</strong></p>
+</li>
+<li><p><strong>&#x7981;&#x6B62; SQL &#x4E2D;&#x5B58;&#x653E;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</strong></p>
+</li>
+<li><p><strong>&#x4F7F;&#x7528;&#x7528; <code>UNION ALL</code> &#x4EE3;&#x66FF; <code>UNION</code></strong></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>&#x7981;&#x6B62;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5B58;&#x50A8;&#x660E;&#x6587;&#x5BC6;&#x7801;</strong></p>
+</li>
+<li><p><strong>&#x907F;&#x514D;&#x4F7F;&#x7528;&#x5B50;&#x67E5;&#x8BE2;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5B50;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x4E3A; <code>JOIN</code> &#x64CD;&#x4F5C;</strong></p>
+</li>
+</ul>
+<ul>
+<li><p><strong>&#x8D85;&#x8FC7;&#x4E09;&#x4E2A;&#x8868;&#x7981;&#x6B62; <code>JOIN</code>&#xFF0C;&#x9700;&#x8981; <code>JOIN</code> &#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x7EDD;&#x5BF9;&#x4E00;&#x81F4;</strong></p>
+</li>
+<li><p><strong>&#x8D85;&#x8FC7; 100w &#x884C;&#x7684;&#x6279;&#x91CF;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x8981;&#x5206;&#x6279;&#x591A;&#x6B21;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</strong></p>
+</li>
+<li><p><strong>&#x51CF;&#x5C11;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4EA4;&#x4E92;&#x6B21;&#x6570;</strong></p>
+</li>
+<li><p><strong>&#x5408;&#x7406;&#x62C6;&#x5206;&#x590D;&#x6742;&#x7684;&#x5927; SQL &#x4E3A;&#x591A;&#x4E2A;&#x5C0F; SQL</strong></p>
+</li>
+<li><p><strong>&#x5982;&#x679C;&#x6709; <code>ORDER BY</code> &#x7684;&#x573A;&#x666F;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;&#x5229;&#x7528;&#x7D22;&#x5F15;&#x7684;&#x6709;&#x5E8F;&#x6027;</strong></p>
+</li>
+<li><p><strong>&#x9875;&#x9762;&#x641C;&#x7D22;&#x4E25;&#x7981;&#x5DE6;&#x6A21;&#x7CCA;&#x6216;&#x8005;&#x5168;&#x6A21;&#x7CCA;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8BF7;&#x8D70;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x6765;&#x89E3;&#x51B3;</strong></p>
+</li>
+<li><p><strong>&#x7981;&#x6B62;&#x5728;&#x7EBF;&#x4E0A;&#x6570;&#x636E;&#x5E93;&#x505A;&#x538B;&#x529B;&#x6D4B;&#x8BD5;</strong></p>
+</li>
+<li><p><strong>&#x7981;&#x6B62;&#x4ECE;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6570;&#x636E;&#x5E93;</strong></p>
+</li>
+</ul>
+<hr>
+<h1 id="&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x89C4;&#x8303;"><a name="&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x89C4;&#x8303;" class="plugin-anchor" href="#&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x89C4;&#x8303;</strong></h1>
+<ul>
+<li><p><strong>&#x7981;&#x6B62;&#x4F7F;&#x7528;&#x4E0D;&#x542B;&#x6709;&#x5B57;&#x6BB5;&#x5217;&#x8868;&#x7684; <code>INSERT</code> &#x8BED;&#x53E5;</strong></p>
+</li>
+<li><p><strong><code>UPDATE</code> &#x5C11;&#x91CF;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5148;&#x4F7F;&#x7528; <code>SELECT</code> &#x5C06;&#x9700;&#x8981;&#x66F4;&#x6539;&#x7684;&#x6570;&#x636E;&#x67E5;&#x51FA;&#xFF0C;&#x5E76;&#x5728; <code>UPDATE</code> &#x8BED;&#x53E5;&#x7684; <code>WHERE</code> &#x6761;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E3B;&#x952E;&#x9650;&#x5236;</strong></p>
+</li>
+<li><p><strong><code>UPDATE</code> &#x5927;&#x91CF;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5148;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5907;&#x4EFD;</strong></p>
+</li>
+<li><p><strong>&#x7981;&#x6B62;&#x5355;&#x6761; SQL &#x8BED;&#x53E5;&#x540C;&#x65F6;&#x66F4;&#x65B0;&#x591A;&#x4E2A;&#x8868;</strong></p>
+</li>
+<li><p><strong>&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x65F6;&#xFF0C;&#x5C06;&#x591A;&#x4E2A; <code>ALERT</code> &#x8BED;&#x53E5;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x6267;&#x884C;</strong></p>
+</li>
+<li><p><strong>&#x82E5;&#x9700;&#x5927;&#x6279;&#x91CF;&#x63D2;&#x5165;&#x6216;&#x66F4;&#x65B0;&#xFF0C;&#x6267;&#x884C;&#x8BED;&#x53E5;&#x5F88;&#x591A;&#xFF0C;&#x5EFA;&#x8BAE;&#x6BCF;&#x9694;&#x4E09;&#x56DB;&#x767E;&#x884C;&#x6DFB;&#x52A0; <code>SELECT SLEEP(1);</code> &#x8BED;&#x53E5;</strong></p>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; zerolee 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-09-28 15:14:08
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="standard-v1.0.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 开发规范">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"开发规范(简化版)","level":"1.4","depth":1,"previous":{"title":"开发规范","level":"1.3","depth":1,"path":"markdown/mysql/standard/standard-v1.0.md","ref":"markdown/mysql/standard/standard-v1.0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["copy-code-button","-lunr","-search","search-plus","search-pro","github","emphasize","splitter","-sharing","-highlight","tbfed-pagefooter","anchors","-livereload","simple-page-toc","prism","prism-themes","sectionx","back-to-top-button","cuav-chapters","heading-anchors","page-toc-button","hide-element","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zerolee 2022","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"disqus":{"shortName":"zeroLee"},"emphasize":{},"github":{"url":"https://github.com/zerolee1993/mysql-guide"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"splitter":{},"search-pro":{},"sytles":{"website":"styles/website.css"},"cuav-chapters":{"summaryMaxSize":20,"useLimitExpanded":false},"theme-fexa":{"search-placeholder":"输入关键字","logo":"assets/images/logo.png","favicon":"assets/images/favicon.ico"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":1},"sectionx":{"tag":"b"},"heading-anchors":{},"page-toc-button":{"maxTocDepth":3,"minTocSize":3},"back-to-top-button":{},"prism-themes":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"search-plus":{}},"theme":"default","author":"lishaofei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"MySQL开发规范","language":"zh-hans","output.name":"site","gitbook":"3.2.3","description":"MySQL开发规范"},"file":{"path":"markdown/mysql/standard/standard-v1.0-simple.md","mtime":"2022-09-28T07:14:08.117Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-28T07:13:29.263Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
