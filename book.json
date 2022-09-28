@@ -10,7 +10,7 @@
         "readme": "README.md"
     },
     "plugins": [
-        "copy-code-button",
+        "code",
         "-lunr", "-search", "search-plus", "search-pro",
         "github",
         "emphasize",
@@ -28,7 +28,8 @@
         "cuav-chapters",
         "heading-anchors",
         "page-toc-button",
-        "hide-element"
+        "hide-element",
+        "accordion"
     ],
 
     "pluginsConfig": {
