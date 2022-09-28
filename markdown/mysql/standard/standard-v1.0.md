@@ -1,3 +1,5 @@
+**[离线版下载](https://github.com/zerolee1993/mysql-guide/export/standard-v1.0.pdf)**
+
 # **建表需要注意什么？**
 
 - **使用自增 id 作为主键**

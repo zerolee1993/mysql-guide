@@ -8,11 +8,15 @@
 
 **本规范参考一些大型互联网公司Mysql开发规范进行精简、整理。其中：**
 
-#### **[快速指引](markdown/mysql/standard/guide.md)**中提供了一些常用的 Mysql 操作的模板及注意事项
 
-#### **[开发规范](markdown/mysql/standard/standard-v1.0.md)**中将完整的规范进行分类说明
 
-#### **[开发规范(简化版)](markdown/mysql/standard/standard-v1.0.md)**中将完整的规范进行精简列举
+#### **[规范快速指引](markdown/mysql/standard/guide.md)** 中提供了一些常用的 Mysql 操作的模板及注意事项
+
+#### **[完整开发规范](markdown/mysql/standard/standard-v1.0.md)** 中将完整的规范进行分类说明
+
+#### **[简版开发规范](markdown/mysql/standard/standard-v1.0.md)** 中将完整规范进行精简列举
+
+
 
 **期望本项目能帮助大家建立起 Mysql 规范开发的意识，并能帮助各位所在企业形成良好的规范开发氛围**
 
